@@ -49,24 +49,20 @@ onMounted(() => {
     new THREE.TorusKnotGeometry(0.8, 0.35, 100, 10),
     material
   );
-  
+  const mesh4 = new THREE.Mesh(new THREE.RingGeometry( 0.9, 1.5, 80 ), material);
 
   const verticesOfCube = [
-    -1,-1,-1,    1,-1,-1,    1, 1,-1,    -1, 1,-1,
-    -1,-1, 1,    1,-1, 1,    1, 1, 1,    -1, 1, 1,
-];
+    -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, -1, 1, 1, 1, 1,
+    -1, 1, 1,
+  ];
 
-const indicesOfFaces = [
-    2,1,0,    0,3,2,
-    0,4,7,    7,3,0,
-    0,1,5,    5,4,0,
-    1,2,6,    6,5,1,
-    2,3,7,    7,6,2,
-    4,5,6,    6,7,4
-];
+  const indicesOfFaces = [
+    2, 1, 0, 0, 3, 2, 0, 4, 7, 7, 3, 0, 0, 1, 5, 5, 4, 0, 1, 2, 6, 6, 5, 1, 2,
+    3, 7, 7, 6, 2, 4, 5, 6, 6, 7, 4,
+  ];
 
-  const mesh4 = new THREE.Mesh(
-    new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 1, 2 ),
+  const mesh5 = new THREE.Mesh(
+    new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces, 1, 2),
     material
   );
 
@@ -74,14 +70,16 @@ const indicesOfFaces = [
   mesh2.position.y = -objectsDistance * 1;
   mesh3.position.y = -objectsDistance * 2;
   mesh4.position.y = -objectsDistance * 3;
+  mesh5.position.y = -objectsDistance * 4;
 
   mesh1.position.x = 2;
   mesh2.position.x = -2;
   mesh3.position.x = 2;
   mesh4.position.x = -2;
-  scene.add(mesh1, mesh2, mesh3, mesh4);
+  mesh5.position.x = 2;
+  scene.add(mesh1, mesh2, mesh3, mesh4, mesh5);
 
-  const sectionMeshes = [mesh1, mesh2, mesh3, mesh4];
+  const sectionMeshes = [mesh1, mesh2, mesh3, mesh4, mesh5];
 
   // particles
   // geometry

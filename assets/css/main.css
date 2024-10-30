@@ -48,4 +48,74 @@ body
 
 .section > div > p {
     font-size: 20px;
+    max-width: 45vw;
+}
+
+
+.section > div > ol > li {
+    padding-bottom: 10px;
+    font-size: 20px;
+    max-width: 45vw;
+}
+
+ li > a {
+    color: #ffeded;
+    text-decoration: none;
+}
+
+.section > div > ol > li > ul > li {
+    font-size: 14px;
+    max-width: 45vw;
+    text-transform:capitalize;
+}
+
+.about-section{
+    font-size: 20px;
+    text-transform:none;
+    text-align: justify;
+
+}
+
+.client-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 20px;
+}
+.client-section > li {
+    border: 2px solid #ffeded;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-transform:none;
+    width: fit-content;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #ffeded12;
+    transition: all;
+    transition-duration: 0.5s;
+
+}
+
+.client-section > li:hover{
+    transform: scale(110%);
+}
+
+.client-section > li > p {
+    font-weight: 600;
+}
+.client-img {
+  height: 44px;
+}
+
+
+.contact-section > li {
+    font-size: 20px;
+    text-transform:none;
+
+
 }
