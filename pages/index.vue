@@ -113,7 +113,8 @@
     <div>
       <h2>Contact me</h2>
       <ul class="contact-section">
-        <li>Email: faysal.dev@gmail.com</li>
+        <li>1st Email: faysal.dev@gmail.com</li>
+        <li>2nd Email: faysal.scale@gmail.com</li>
         <li>Linkedin: linkedin.com/in/faysalahmad</li>
       </ul>
     </div>
